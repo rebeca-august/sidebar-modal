@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import {
   FaBehance,
   FaFacebook,
@@ -9,8 +9,8 @@ import {
   FaUserFriends,
   FaFolderOpen,
   FaCalendarAlt,
-  FaWpforms,
-} from 'react-icons/fa';
+  FaRegHeart,
+} from 'react-icons/fa'
 export const links = [
   {
     id: 1,
@@ -38,11 +38,11 @@ export const links = [
   },
   {
     id: 5,
-    url: '/documents',
-    text: 'documents',
-    icon: <FaWpforms />,
+    url: '/favorites',
+    text: 'favorites',
+    icon: <FaRegHeart />,
   },
-];
+]
 
 export const social = [
   {
@@ -70,4 +70,4 @@ export const social = [
     url: 'https://www.twitter.com',
     icon: <FaSketch />,
   },
-];
+]
