@@ -1,8 +1,21 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, ReactNode } from 'react'
 
-const AppContext = React.createContext()
+type State = {
+  isSidebarOpen: boolean
+  isModalOpen: boolean
+  openSidebar: () => void
+  closeSidebar: () => void
+  openModal: () => void
+  closeModal: () => void
+}
 
-const AppProvider = ({ children }) => {
+const AppContext = React.createContext<State>({} as State)
+
+type Props = {
+  children: ReactNode
+}
+
+const AppProvider = ({ children }: Props) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const [isModalOpen, setIsModalOpen] = useState(false)
 
